@@ -39,13 +39,12 @@ This project aims to develop an advanced security system that leverages IoT devi
 
 # Project Summary Table: IoT Multicloud Security System with Facial Recognition
 
-| | |
+|  | **Description** |
 |-------------|-------------|
 | **Title** | IoT Multicloud Security System with Facial Recognition |
 | **Overview** | IoT-based security system leveraging multicloud infrastructure, real-time monitoring, and facial recognition. |
 | **Functional Requirements** | 1. **IoT Device Management** (IoT, Electronics) <br> 2. **Real-time Notification System** (Software, Networks) <br> 3. **Facial Recognition** (AI, Computer Vision) <br> 4. **Multicloud System** (Cloud Computing, Distributed Systems) |
 | **Non-Functional Requirements** | 1. **Scalability** <br> 2. **Reliability** <br> 3. **Performance** <br> 4. **Compliance** |
-|-------------|-------------|
 
 ---
 
