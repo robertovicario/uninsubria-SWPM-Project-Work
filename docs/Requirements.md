@@ -44,5 +44,5 @@ This project aims to develop an advanced security system that leverages IoT devi
 
 **Students:**
 
-- `Roberto Vicario` `ID_744072`
-- `Emanuele Andreu` `ID_746784`
+- `Roberto Vicario` `744072`
+- `Emanuele Andreu` `746784`
