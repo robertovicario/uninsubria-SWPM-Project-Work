@@ -4,8 +4,6 @@
 
 This project aims to develop an advanced security system that leverages IoT devices, facial recognition technology, and multicloud infrastructure. The system will allow real-time monitoring, detection, and response to unauthorized access across multiple physical and cloud environments.
 
-### Requirements
-
 ### Functional Requirements
 
 1. **IoT Device Management:** Facilitates remote monitoring, control, and automatic firmware updates for IoT devices, maintaining security with the latest patches.
@@ -24,7 +22,6 @@ This project aims to develop an advanced security system that leverages IoT devi
 
    - **Fields:** Cloud Computing, Distributed Systems
 
-
 ### Non-Functional Requirements
 
 1. **Scalability:** The system efficiently scales to accommodate growing numbers of IoT devices and users without degradation in performance.
@@ -37,7 +34,7 @@ This project aims to develop an advanced security system that leverages IoT devi
 
 ### Resume
 
-|  | **Description** |
+| **Section** | **Details** |
 |-------------|-------------|
 | **Title** | IoT Multicloud Security System with Facial Recognition |
 | **Overview** | IoT-based security system leveraging multicloud infrastructure, real-time monitoring, and facial recognition. |
