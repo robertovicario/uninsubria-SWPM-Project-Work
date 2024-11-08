@@ -1,14 +1,5 @@
 # IoT Multicloud Security System with Facial Recognition
 
-### Information
-
-- **Title:** IoT Multicloud Security System with Facial Recognition
-
-Students:
-
-- Roberto Vicario – ID 744072 
-- Emanuele Andreu – ID 746784
-
 ### Overview
 
 This project aims to develop an advanced security system that leverages IoT devices, facial recognition technology, and multicloud infrastructure. The system will allow real-time monitoring, detection, and response to unauthorized access across multiple physical and cloud environments.
@@ -55,3 +46,10 @@ This project aims to develop an advanced security system that leverages IoT devi
 | **Functional Requirements** | 1. **IoT Device Management** (IoT, Electronics) <br> 2. **Real-time Notification System** (Software, Networks) <br> 3. **Facial Recognition** (AI, Computer Vision) <br> 4. **Multicloud System** (Cloud Computing, Distributed Systems) |
 | **Non-Functional Requirements** | 1. **Scalability** <br> 2. **Reliability** <br> 3. **Performance** <br> 4. **Compliance** |
 |-------------|-------------|
+
+---
+
+Students:
+
+- Roberto Vicario – ID 744072 
+- Emanuele Andreu – ID 746784
