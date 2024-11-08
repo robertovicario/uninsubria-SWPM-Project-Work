@@ -44,5 +44,5 @@ This project aims to develop an advanced security system that leverages IoT devi
 
 Students:
 
-- Roberto Vicario – ID 744072 
-- Emanuele Andreu – ID 746784
+- Roberto Vicario (ID 744072)
+- Emanuele Andreu (ID 746784)
