@@ -37,8 +37,6 @@ This project aims to develop an advanced security system that leverages IoT devi
 
 ### Resume
 
-# Project Summary Table: IoT Multicloud Security System with Facial Recognition
-
 |  | **Description** |
 |-------------|-------------|
 | **Title** | IoT Multicloud Security System with Facial Recognition |
