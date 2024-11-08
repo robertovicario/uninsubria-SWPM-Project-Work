@@ -1,0 +1,351 @@
+#######Basic Functional Components
+Considerando le funzionalità del progetto "IoT Multicloud Security System with Facial Recognition," possiamo ipotizzare i seguenti Basic Functional Components (BFC):
+
+### 1. **Internal Logical Files (ILF)**
+   - **Dati Utenti**: Contiene informazioni sugli utenti autorizzati, inclusi nomi, credenziali e profili di accesso. Necessario per verificare le identità.
+   - **Registro di Accesso e Notifiche**: Archivia eventi di accesso, con timestamp e dettagli dell'utente (o tentativi di accesso non autorizzati). Utile per audit e tracciamento storico degli eventi.
+
+### 2. **External Interface Files (EIF)**
+   - **Dati di Cloud Esterni**: Dati conservati e gestiti da cloud provider esterni che integrano funzionalità di archiviazione e back-end (e.g., AWS, Google Cloud).
+   - **Dispositivi IoT**: Interfacce con dati da dispositivi IoT, che potrebbero essere mantenuti da altri sistemi ma utilizzati per la raccolta dati, come sensori o telecamere.
+
+### 3. **External Inputs (EI)**
+   - **Input Video da Telecamere IoT**: I flussi video in ingresso che alimentano l'algoritmo di riconoscimento facciale per identificare le persone.
+   - **Input di Configurazione da Amministratori**: Permette agli amministratori di sistema di configurare le soglie di sicurezza, impostare utenti autorizzati, e gestire escalation di allarmi.
+
+### 4. **External Outputs (EO)**
+   - **Notifiche di Sicurezza in Tempo Reale**: Uscita di dati che invia notifiche (via SMS, email o app) agli amministratori in caso di accesso non autorizzato. Include dati su orario e luogo dell'incidente.
+   - **Rapporti di Accesso Periodici**: Report generati periodicamente sull'attività di accesso, comprensivi di dati statistici su accessi autorizzati e tentativi di accesso non autorizzati.
+
+### 5. **External Inquiries (EQ)**
+   - **Consultazione Storico Accessi**: Permette di interrogare il registro storico per verificare chi ha avuto accesso o tentato l’accesso al sistema.
+   - **Interrogazione Configurazioni di Sicurezza**: Fornisce informazioni configurate per la sicurezza (e.g., escalation per livelli di allerta, utenti autorizzati).
+
+### Riepilogo
+- **ILF**: Dati Utenti, Registro di Accesso e Notifiche
+- **EIF**: Dati di Cloud Esterni, Dispositivi IoT
+- **EI**: Input Video da Telecamere IoT, Input di Configurazione da Amministratori
+- **EO**: Notifiche di Sicurezza in Tempo Reale, Rapporti di Accesso Periodici
+- **EQ**: Consultazione Storico Accessi, Interrogazione Configurazioni di Sicurezza
+
+Questi componenti funzionali rappresentano una struttura coerente per gestire e misurare le funzionalità principali del sistema, come richiesto dal progetto.
+
+
+
+
+
+
+
+####### boundaries
+In base al concetto di **boundary** nel Function Point Analysis (FPA), possiamo definire il **confine** per il progetto "IoT Multicloud Security System with Facial Recognition" come segue:
+
+Il **boundary** rappresenta il limite tra il sistema di sicurezza (il progetto in esame) e i sistemi esterni o i domini degli utenti. Questo significa che il sistema stesso può interagire con altri sistemi situati al di fuori di questo confine, ma le interazioni con questi elementi esterni devono essere chiaramente definite e separate dalle operazioni interne del sistema.
+
+### Identificazione del Boundary per il Sistema di Sicurezza Multicloud IoT
+1. **Definizione del Confine**:
+   - Il boundary per questo sistema include tutte le componenti che fanno parte del progetto e sono gestite o controllate direttamente dal sistema di sicurezza. Al di fuori di questo boundary, ci sono sistemi o domini utente che interagiscono con il sistema ma non sono sotto il controllo diretto del progetto.
+   
+2. **Interazioni Esterne**:
+   - Il sistema può ricevere dati da dispositivi IoT (ad esempio, flussi video dalle telecamere) e inviare notifiche di allarme agli amministratori tramite servizi di messaggistica o email, ma questi dispositivi e servizi esterni non fanno parte del boundary. 
+   - I cloud provider esterni che offrono supporto infrastrutturale e backup dati sono anch'essi fuori dal boundary, anche se il sistema interagisce con essi per garantire resilienza e disponibilità.
+
+3. **Domini Utente**:
+   - Gli utenti (amministratori di sistema e responsabili della sicurezza) interagiscono con il sistema per configurare impostazioni, visualizzare rapporti e ricevere notifiche. Tuttavia, il dominio utente è separato dal sistema, poiché gli utenti non possono modificare direttamente la logica o i dati interni senza passare attraverso le interfacce definite.
+
+4. **Componenti Interne**:
+   - I dati sugli utenti e il registro degli eventi (log) di accesso e sicurezza sono mantenuti all'interno del boundary, poiché fanno parte della logica interna del sistema e sono accessibili solo tramite le funzionalità del sistema stesso.
+
+In questo contesto, il **boundary** serve a distinguere chiaramente tra:
+- **Operazioni e dati interni** (gestiti dal sistema di sicurezza stesso, come la gestione degli utenti e dei log di accesso)
+- **Interazioni esterne** con dispositivi IoT, utenti e servizi cloud, che rientrano nei requisiti funzionali del sistema ma rimangono al di fuori del suo controllo diretto.
+
+
+
+
+
+
+#######Logical data files
+Logical Data Files per il Progetto
+Internal Logical Files (ILF)
+
+Dati Utenti Autorizzati:
+
+Descrizione: Contiene informazioni su utenti autorizzati a accedere a determinate aree o dispositivi monitorati dal sistema. Questo file è essenziale per il controllo degli accessi e contiene attributi come nomi utenti, foto, ruoli, permessi e, eventualmente, credenziali.
+Uso: Utilizzato per il confronto con le immagini dal feed video e per autorizzare o negare accessi.
+Log degli Eventi di Accesso:
+
+Descrizione: Registra tutte le attività di accesso, incluse le date, gli orari, i dettagli dell’utente e il risultato (accesso autorizzato o tentativo di accesso non autorizzato).
+Uso: Serve come fonte di audit per monitorare e tracciare tutti gli eventi di accesso. Questo log è fondamentale per la conformità e per la sicurezza, permettendo di analizzare eventuali problemi o tentativi di violazione.
+Configurazioni di Sicurezza e Allarmi:
+
+Descrizione: Memorizza impostazioni di sicurezza, inclusi livelli di allarme, regole per l’escalation, criteri di notifica e dettagli di configurazione per la gestione degli incidenti.
+Uso: Accessibile dagli amministratori per aggiornare i parametri e rispondere a eventi di sicurezza, supportando la gestione centralizzata delle impostazioni di sicurezza.
+External Interface Files (EIF)
+
+Informazioni e Configurazioni da Cloud Provider:
+
+Descrizione: I dati di configurazione e di supporto forniti dai vari cloud provider utilizzati dal sistema per l’archiviazione e il backup. Questi dati non vengono modificati dal sistema ma sono consultati per la distribuzione delle risorse e la gestione dell'infrastruttura cloud.
+Uso: Usato dal sistema per garantire ridondanza e disponibilità dei dati tramite cloud esterni. È un file di sola lettura per l'accesso ai dati critici di riferimento.
+Dati dai Dispositivi IoT:
+
+Descrizione: File di dati dei dispositivi IoT esterni, come telecamere e sensori, che raccolgono flussi video e altri dati sensoriali.
+Uso: Utilizzato dal sistema per l’elaborazione del riconoscimento facciale e per altri processi di monitoraggio della sicurezza. Anche questo è un file di sola lettura, in quanto il sistema di sicurezza non gestisce direttamente i dispositivi.
+Riepilogo dei Logical Data Files
+ILF:
+
+Dati Utenti Autorizzati
+Log degli Eventi di Accesso
+Configurazioni di Sicurezza e Allarmi
+EIF:
+
+Informazioni e Configurazioni da Cloud Provider
+Dati dai Dispositivi IoT
+Questi LDF definiscono le principali categorie di dati che il sistema gestisce internamente e quelli esterni di cui si serve come riferimento. La distinzione tra ILF ed EIF aiuta a determinare quali dati sono di proprietà del sistema e quali, pur essendo utilizzati, rimangono esterni e immutabili​​​.
+
+
+
+
+
+
+#######transaction
+Transazioni Identificate per il Progetto
+1. External Inputs (EI)
+Queste sono le transazioni che permettono di inserire o aggiornare informazioni nel sistema.
+
+Caricamento di Feed Video per il Riconoscimento Facciale:
+
+Descrizione: I flussi video in tempo reale provenienti dalle telecamere IoT entrano nel sistema per l'analisi facciale. Ogni frame video viene utilizzato per il riconoscimento di volti.
+Uso: Utilizzato per identificare le persone e consentire o negare l’accesso in base alla lista di utenti autorizzati.
+Configurazione dei Parametri di Sicurezza:
+
+Descrizione: Permette agli amministratori di configurare i parametri di sicurezza, come la soglia di accesso per l’autorizzazione, le regole di escalation degli allarmi, e i livelli di notifica.
+Uso: Garantisce che il sistema funzioni secondo i criteri di sicurezza definiti.
+Registrazione di Nuovi Utenti e Aggiornamento dei Permessi:
+
+Descrizione: Consente di aggiungere o aggiornare i dati degli utenti autorizzati, inclusi nomi, foto, permessi di accesso, e ruoli.
+Uso: Essenziale per mantenere aggiornata la lista di accessi consentiti.
+2. External Outputs (EO)
+Queste transazioni producono risultati che escono dal sistema, come notifiche o report.
+
+Notifiche di Allarme in Tempo Reale:
+
+Descrizione: Invia notifiche via SMS, email o app mobile agli amministratori in caso di rilevamento di accesso non autorizzato.
+Uso: Fornisce un avviso immediato per una risposta rapida agli incidenti di sicurezza.
+Generazione di Report di Accesso e Sicurezza:
+
+Descrizione: Produce report periodici su eventi di accesso, con statistiche su tentativi autorizzati e non autorizzati.
+Uso: Usato dagli amministratori per analisi e monitoraggio continuo della sicurezza.
+3. External Inquiries (EQ)
+Queste transazioni permettono di interrogare il sistema per ottenere informazioni senza modificarle.
+
+Consultazione Storico Accessi:
+
+Descrizione: Gli amministratori possono interrogare i log storici per visualizzare dettagli sugli eventi di accesso passati, sia autorizzati che non autorizzati.
+Uso: Utilizzato per audit e controllo di sicurezza, permette di tracciare il comportamento storico degli accessi.
+Visualizzazione Configurazioni Correnti di Sicurezza:
+
+Descrizione: Permette di visualizzare le impostazioni attuali del sistema di sicurezza, come le soglie di allarme, le regole di escalation e i dettagli di notifica.
+Uso: Garantisce che gli amministratori possano verificare rapidamente lo stato delle configurazioni di sicurezza senza apportare modifiche.
+Riepilogo delle Transazioni
+EI (External Inputs):
+
+Caricamento di Feed Video per Riconoscimento Facciale
+Configurazione dei Parametri di Sicurezza
+Registrazione di Nuovi Utenti e Aggiornamento dei Permessi
+EO (External Outputs):
+
+Notifiche di Allarme in Tempo Reale
+Generazione di Report di Accesso e Sicurezza
+EQ (External Inquiries):
+
+Consultazione Storico Accessi
+Visualizzazione Configurazioni Correnti di Sicurezza
+Queste transazioni rappresentano le interazioni principali tra il sistema di sicurezza e le entità esterne (come dispositivi IoT e amministratori) e contribuiscono alla funzionalità globale del sistema​​​.
+
+
+
+
+
+
+
+#######processing logic
+Grazie per l'immagine della tabella! Utilizzando i titoli delle righe mostrati, ecco una tabella ricreata con la logica di elaborazione per ciascun tipo di transazione (EI, EO, EQ):
+
+| Form of Processing Logic                                     | EI  | EO  | EQ  |
+|-------------------------------------------------------------|-----|-----|-----|
+| **1. Validations are performed**                            | c   | c   | c   |
+| **2. Mathematical formula and calculations are performed**  | c   | m*  | n   |
+| **3. Equivalent values are converted**                      | c   | c   | c   |
+| **4. Data is filtered and selected by using specified criteria to compare multiple sets of data** | c | c | c |
+| **5. Conditions are analyzed to determine which are applicable** | c | c | c |
+| **6. At least one ILF is updated**                          | m*  | m*  | n   |
+| **7. At least one ILF or EIF is referenced**                | c   | c   | m   |
+| **8. Data or control information is retrieved**             | c   | c   | m   |
+| **9. Derived data is created**                              | c   | m*  | n   |
+| **10. Behavior of the system is altered**                   | m*  | m*  | n   |
+| **11. Prepare and present information outside the boundary**| c   | m   | m   |
+| **12. Capability to accept data or control information that enters the application boundary** | m | c | c |
+| **13. Resorting or rearranging a set of data**              | c   | c   | c   |
+
+Questa tabella segue la logica di elaborazione per le transazioni EI, EO e EQ, basata sugli esempi presenti nell'immagine fornita.
+
+
+
+
+
+
+#######complexity rating
+Ecco una tabella di **Complexity Rating** adattata al contesto del progetto "IoT Multicloud Security System with Facial Recognition" utilizzando i criteri per RET, FTR e DET visti nell'immagine:
+
+| Component                     | RET's | FTR's | DET's |
+|-------------------------------|-------|-------|-------|
+| **External Inputs (EI)**      |       | ✔️     | ✔️     |
+| **External Outputs (EO)**     |       | ✔️     | ✔️     |
+| **External Inquiries (EQ)**   |       | ✔️     | ✔️     |
+| **External Interface Files (EIF)** | ✔️ |       | ✔️     |
+| **Internal Logical Files (ILF)**   | ✔️ |       | ✔️     |
+
+### Interpretazione per il tuo contesto:
+
+- **External Inputs (EI)**, **External Outputs (EO)**, e **External Inquiries (EQ)**: La complessità è determinata da **FTR** e **DET**, poiché queste transazioni dipendono dai tipi di dati gestiti e dai file referenziati per ogni operazione.
+  
+- **External Interface Files (EIF)** e **Internal Logical Files (ILF)**: La complessità per questi file è valutata usando **RET** e **DET**, in quanto rappresentano gruppi di dati interni o esterni organizzati logicamente e non interagiscono direttamente con altri file di riferimento.
+
+Questa struttura di **Complexity Rating** permette di valutare accuratamente la complessità delle componenti in base ai criteri stabiliti, consentendo di stimare il punteggio funzionale del sistema secondo i principi del Function Point Analysis (FPA).
+
+
+
+
+
+
+#######RETs, DETs, FTRs
+Ecco gli esempi di **RETs**, **DETs** e **FTRs** applicati al progetto "IoT Multicloud Security System with Facial Recognition":
+
+### RETs (Record Element Types)
+- Nel file **Dati Utenti Autorizzati**, ogni gruppo di dati relativi a un utente (come nome, foto, permessi di accesso) è un RET.
+- Nel **Registro di Accesso e Notifiche**, ogni record che rappresenta un evento di accesso o un tentativo di accesso (con timestamp, utente, risultato) è considerato un RET.
+
+### DETs (Data Element Types)
+- Per la transazione di **Registrazione di Nuovi Utenti**, i DETs includono campi come nome dell’utente, foto, email, livello di accesso.
+- Per la **Notifica di Accesso Non Autorizzato**, i DETs possono includere la data e ora dell'evento, il livello di allarme, il luogo dell’incidente e il tipo di notifica (SMS, email).
+
+### FTRs (File Types Referenced)
+- Nella transazione di **Riconoscimento Facciale**, il sistema referenzia i **Dati Utenti Autorizzati** come FTR per verificare l’identità.
+- Nella transazione di **Consultazione Storico Accessi**, il sistema fa riferimento al **Registro di Accesso e Notifiche** per visualizzare gli eventi passati.
+
+Questi esempi specifici mostrano come RETs, DETs e FTRs siano applicati direttamente nel contesto del progetto per definire la complessità delle componenti funzionali.
+
+
+
+
+
+
+
+#######EI,EO,EQ,EIF,LF reating 
+Ecco le tabelle di **rating** per i diversi componenti funzionali del progetto "IoT Multicloud Security System with Facial Recognition," basate sui valori stimati di **RETs**, **DETs**, e **FTRs** specifici per il contesto del progetto.
+
+### 1. **EI Rating (External Inputs)**
+Per determinare la complessità degli **External Inputs**, si utilizza il numero di **DET** (Data Element Types) e **FTR** (File Types Referenced).
+
+| Files Type Referenced (FTR) | Data Elements (DET) 1-4 | Data Elements (DET) 5-15 | Data Elements (DET) Greater than 15 |
+|-----------------------------|-------------------------|---------------------------|-------------------------------------|
+| **Less than 2**             | Low (3)                | Low (3)                   | Average (4)                        |
+| **2**                       | Low (3)                | Average (4)               | High (6)                           |
+| **Greater than 2**          | Average (4)            | High (6)                  | High (6)                           |
+
+### Esempio nel Progetto
+- **Caricamento di Feed Video per Riconoscimento Facciale**: 10 DET e 2 FTR → **Media (4)**
+- **Configurazione dei Parametri di Sicurezza**: 5 DET e 1 FTR → **Bassa (3)**
+
+---
+
+### 2. **EO Rating (External Outputs)**
+Per gli **External Outputs**, si utilizza il numero di **DET** e **FTR**.
+
+| Files Type Referenced (FTR) | Data Elements (DET) 1-5 | Data Elements (DET) 6-19 | Data Elements (DET) Greater than 19 |
+|-----------------------------|-------------------------|---------------------------|-------------------------------------|
+| **Less than 2**             | Low (4)                | Low (4)                   | Average (5)                        |
+| **2**                       | Low (4)                | Average (5)               | High (7)                           |
+| **Greater than 2**          | Average (5)            | High (7)                  | High (7)                           |
+
+### Esempio nel Progetto
+- **Notifiche di Allarme in Tempo Reale**: 6 DET e 2 FTR → **Media (5)**
+- **Generazione di Report di Accesso e Sicurezza**: 20 DET e 3 FTR → **Alta (7)**
+
+---
+
+### 3. **EQ Rating (External Inquiries)**
+Per le **External Inquiries**, si considerano **DET** e **FTR**.
+
+| Files Type Referenced (FTR) | Data Elements (DET) 1-5 | Data Elements (DET) 6-19 | Data Elements (DET) Greater than 19 |
+|-----------------------------|-------------------------|---------------------------|-------------------------------------|
+| **Less than 2**             | Low (3)                | Low (3)                   | Average (4)                        |
+| **2**                       | Low (3)                | Average (4)               | High (6)                           |
+| **Greater than 2**          | Average (4)            | High (6)                  | High (6)                           |
+
+### Esempio nel Progetto
+- **Consultazione Storico Accessi**: 7 DET e 2 FTR → **Media (4)**
+- **Visualizzazione Configurazioni Correnti di Sicurezza**: 4 DET e 1 FTR → **Bassa (3)**
+
+---
+
+### 4. **EIF Rating (External Interface Files)**
+Gli **External Interface Files** sono valutati utilizzando **RET** e **DET**.
+
+| Record Element Types (RET)  | Data Elements (DET) 1-5 | Data Elements (DET) 6-19 | Data Elements (DET) Greater than 19 |
+|-----------------------------|-------------------------|---------------------------|-------------------------------------|
+| **1**                       | Low (5)                | Low (5)                   | Average (7)                        |
+| **2-5**                     | Low (5)                | Average (7)               | High (10)                          |
+| **More than 5**             | Average (7)            | High (10)                 | High (10)                          |
+
+### Esempio nel Progetto
+- **Informazioni e Configurazioni da Cloud Provider**: 2 RET e 10 DET → **Media (7)**
+- **Dati dai Dispositivi IoT**: 1 RET e 15 DET → **Bassa (5)**
+
+---
+
+### 5. **ILF Rating (Internal Logical Files)**
+Per gli **Internal Logical Files**, si considerano **RET** e **DET**.
+
+| Record Element Types (RET)  | Data Elements (DET) 1-19 | Data Elements (DET) 20-50 | Data Elements (DET) Greater than 50 |
+|-----------------------------|--------------------------|---------------------------|-------------------------------------|
+| **1**                       | Low (7)                 | Low (7)                   | Average (10)                       |
+| **2-5**                     | Low (7)                 | Average (10)              | High (15)                          |
+| **More than 5**             | Average (10)            | High (15)                 | High (15)                          |
+
+### Esempio nel Progetto
+- **Dati Utenti Autorizzati**: 3 RET e 25 DET → **Media (10)**
+- **Registro di Accesso e Notifiche**: 6 RET e 35 DET → **Alta (15)**
+
+---
+
+### Riassunto
+Queste tabelle di **rating** possono essere applicate per valutare ciascuna componente funzionale del progetto in termini di complessità, utilizzando i valori calcolati di **DET**, **FTR** e **RET**.
+
+
+
+
+
+
+
+#######FP
+Utilizzando l'immagine come riferimento, ecco come calcolare il **Function Point (FP) count** per il progetto "IoT Multicloud Security System with Facial Recognition" basandosi sui livelli di complessità (Bassa, Media, Alta) di ciascun elemento funzionale (EI, EO, EQ, ILF, EIF):
+
+| Element | Low   | Average   | High   | Total |
+|---------|-------|-----------|--------|-------|
+| Input   | 1 x 3 | 2 x 4     | 1 x 6  | 17    |
+| Output  | 1 x 4 | 1 x 5     | 0 x 7  | 9     |
+| Inquiry | 1 x 3 | 1 x 4     | 1 x 6  | 13    |
+| ILF     | 0 x 7 | 1 x 10    | 1 x 15 | 25    |
+| EIF     | 1 x 5 | 0 x 7     | 1 x 10 | 15    |
+| **FP**  |       |           |        | **79** |
+
+### Spiegazione del Calcolo:
+1. **Input (EI)**: Abbiamo considerato 1 input con complessità bassa (3 punti), 2 con complessità media (4 punti ciascuno), e 1 con complessità alta (6 punti), totalizzando 17 punti.
+2. **Output (EO)**: 1 output con complessità bassa (4 punti) e 1 con complessità media (5 punti), per un totale di 9 punti.
+3. **Inquiry (EQ)**: 1 inquiry con complessità bassa (3 punti), 1 media (4 punti), e 1 alta (6 punti), per un totale di 13 punti.
+4. **ILF**: Nessun ILF con complessità bassa, 1 con complessità media (10 punti), e 1 alta (15 punti), per un totale di 25 punti.
+5. **EIF**: 1 EIF con complessità bassa (5 punti) e 1 alta (10 punti), totalizzando 15 punti.
+
+### FP Totale:
+La somma dei punti per tutti gli elementi funzionali è 79 Function Points (FP), che rappresentano la misura complessiva della dimensione funzionale del sistema.
