@@ -1,0 +1,160 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:132.0) Gecko/20100101 Firefox/132.0" version="24.8.4">
+  <diagram name="Pagina-1" id="D13QJe2ayKjuqtLv1IYh">
+    <mxGraphModel dx="1363" dy="919" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-36" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;fillStyle=hatch;strokeWidth=2;fillColor=none;fontSize=8;strokeColor=#b85450;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;dashed=1;dashPattern=12 12;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="560" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-28" value="External Inputs (EI)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="40" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-48" value="External Interface Files (EIF)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="560" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-19" value="External Inputs (EI)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-22" value="External Outputs (EO)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="480" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-25" value="External Inquiries (EQ)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillStyle=auto;html=1;labelBackgroundColor=none;glass=0;" parent="1" vertex="1">
+          <mxGeometry x="600" y="480" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-12" value="Internal Logical Files (ILF)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;align=center;strokeWidth=2;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-52" value="Sends&lt;br style=&quot;font-size: 8px;&quot;&gt;Video Streams" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;endArrow=block;endFill=1;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-50" target="AJMAhNCRO-aLFB6b-1Le-29" edge="1">
+          <mxGeometry x="0.5769" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="660" />
+              <mxPoint x="240" y="100" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-51" value="Stores Reports&lt;br style=&quot;font-size: 8px;&quot;&gt;in the Cloud" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;endArrow=block;endFill=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-49" target="AJMAhNCRO-aLFB6b-1Le-24" edge="1">
+          <mxGeometry x="-0.4" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="620" />
+              <mxPoint x="320" y="580" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-29" value="Video Input from IoT Cameras" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="80" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-49" value="External Cloud Data" style="text;strokeColor=#6c8ebf;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="600" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-50" value="IoT Devices" style="text;strokeColor=#6c8ebf;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="640" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-65" value="Sets&lt;br style=&quot;font-size: 8px;&quot;&gt;Security&lt;br style=&quot;font-size: 8px;&quot;&gt;Configurations" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;startArrow=block;startFill=1;endArrow=block;endFill=1;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-21" target="AJMAhNCRO-aLFB6b-1Le-27" edge="1">
+          <mxGeometry x="-0.7778" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="420" />
+              <mxPoint x="800" y="420" />
+              <mxPoint x="800" y="580" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-21" value="Configuration Input from Administrators" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-23" value="Real-Time Security Notifications" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="520" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-74" value="Accesses&lt;br style=&quot;font-size: 8px;&quot;&gt;Historical&lt;br style=&quot;font-size: 8px;&quot;&gt;Activitiy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=1;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;fontFamily=Verdana;curved=0;endArrow=block;endFill=1;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-24" target="AJMAhNCRO-aLFB6b-1Le-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-24" value="Periodic Access Reports" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="560" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-75" value="Queries&lt;br style=&quot;font-size: 8px;&quot;&gt;Access log" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.998;entryY=0.252;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;curved=0;startArrow=block;startFill=1;endArrow=block;endFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8;fontFamily=Verdana;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-26" target="AJMAhNCRO-aLFB6b-1Le-14" edge="1">
+          <mxGeometry x="-0.0616" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="540" />
+              <mxPoint x="780" y="460" />
+              <mxPoint x="580" y="460" />
+              <mxPoint x="580" y="370" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-26" value="Access History Consultation" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="520" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-77" value="Checks&lt;br style=&quot;font-size: 8px;&quot;&gt;Configurations" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.004;entryY=0.751;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;endArrow=block;endFill=1;startArrow=block;startFill=1;curved=0;exitX=0.504;exitY=0.998;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;fontSize=8;fontFamily=Verdana;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-27" target="AJMAhNCRO-aLFB6b-1Le-21" edge="1">
+          <mxGeometry x="-0.6185" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="681" y="640" />
+              <mxPoint x="820" y="640" />
+              <mxPoint x="820" y="370" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-27" value="Security Configuration Inquiry" style="text;strokeColor=#82b366;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="560" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-61" value="Configures&lt;br style=&quot;font-size: 8px;&quot;&gt;User Data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.249;entryDx=0;entryDy=0;startArrow=block;startFill=1;strokeWidth=2;endArrow=block;endFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;entryPerimeter=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-13" target="AJMAhNCRO-aLFB6b-1Le-21" edge="1">
+          <mxGeometry x="-0.04" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="340" />
+              <mxPoint x="560" y="260" />
+              <mxPoint x="800" y="260" />
+              <mxPoint x="800" y="350" />
+              <mxPoint x="760" y="350" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-13" value="User Data" style="text;strokeColor=#6c8ebf;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="320" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-58" value="Triggers&lt;br style=&quot;font-size: 8px;&quot;&gt;Notifications" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-14" target="AJMAhNCRO-aLFB6b-1Le-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="380" />
+              <mxPoint x="320" y="540" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-14" value="Access Log and Notifications" style="text;strokeColor=#6c8ebf;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="360" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-40" value="Application Boundary" style="text;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=1;whiteSpace=wrap;html=1;fontFamily=Verdana;strokeWidth=2;fontSize=12;container=0;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="200" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-68" value="Notifies&lt;br style=&quot;font-size: 8px;&quot;&gt;Unauthorized&lt;br style=&quot;font-size: 8px;&quot;&gt;Accesses" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.502;entryY=0.998;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=1;startArrow=block;startFill=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;jumpStyle=none;shadow=0;curved=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-23" target="AJMAhNCRO-aLFB6b-1Le-14" edge="1">
+          <mxGeometry x="0.7348" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="540" />
+              <mxPoint x="560" y="440" />
+              <mxPoint x="440" y="440" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AJMAhNCRO-aLFB6b-1Le-62" value="Triggers&lt;br style=&quot;font-size: 8px;&quot;&gt;Access&lt;br style=&quot;font-size: 8px;&quot;&gt;Logging" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.996;entryY=0.752;entryDx=0;entryDy=0;strokeWidth=2;startArrow=block;startFill=1;endArrow=block;endFill=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Verdana;fontSize=8;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;curved=0;entryPerimeter=0;" parent="1" source="AJMAhNCRO-aLFB6b-1Le-29" target="AJMAhNCRO-aLFB6b-1Le-14" edge="1">
+          <mxGeometry x="-0.475" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="100" />
+              <mxPoint x="880" y="440" />
+              <mxPoint x="560" y="440" />
+              <mxPoint x="560" y="390" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
