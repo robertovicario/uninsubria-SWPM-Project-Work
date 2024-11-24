@@ -1,0 +1,284 @@
+### RIASSUNTO LEZIONE 7
+
+La **lezione 7** si focalizza sull'**approccio COCOMO** (COnstructive COst MOdel) per la stima dei costi e degli sforzi nei progetti software. Di seguito una sintesi dei punti principali:
+
+---
+
+### **1. Introduzione a COCOMO**
+COCOMO è un modello empirico usato per stimare:
+- **Effort (E)** in mesi/uomo (person-months).
+- **Tempo di sviluppo (T)** in mesi.
+- **Produttività (P)** in linee di codice per mese/uomo.
+
+COCOMO considera come input la dimensione del progetto in **KLOC** (thousand lines of code).
+
+---
+
+### **2. Tipologie di Progetti**
+COCOMO suddivide i progetti in tre categorie:
+1. **Organic**: Progetti semplici, team esperti, requisiti chiari.
+   - Es: Software gestionale.
+2. **Semidetached**: Complessità media, combinazione di team esperti e non.
+   - Es: Sistemi di informazione aziendale.
+3. **Embedded**: Alta complessità, hardware/software strettamente integrati.
+   - Es: Sistemi aerospaziali.
+
+---
+
+### **3. Formula Base**
+Il modello base utilizza la formula:
+\[ E = a \times (KLOC)^b \]
+- **Effort (E)**: Stima del lavoro in mesi/uomo.
+- **a, b**: Costanti dipendenti dalla categoria del progetto.
+
+Parametri tipici:
+| Tipo di progetto | \( a \) | \( b \) |
+|-------------------|--------|--------|
+| Organic           | 2.4    | 1.05   |
+| Semidetached      | 3.0    | 1.12   |
+| Embedded          | 3.6    | 1.20   |
+
+---
+
+### **4. Tempo di Sviluppo**
+Il tempo necessario per completare il progetto è stimato con:
+\[ T = c \times (E)^d \]
+- **c, d**: Costanti che dipendono dal tipo di progetto.
+- Parametri tipici:
+  | Tipo di progetto | \( c \) | \( d \) |
+  |-------------------|--------|--------|
+  | Organic           | 2.5    | 0.38   |
+  | Semidetached      | 2.5    | 0.35   |
+  | Embedded          | 2.5    | 0.32   |
+
+---
+
+### **5. Esempio di Calcolo**
+Se il progetto è semidetached e il software ha 10 KLOC:
+1. **Effort**:
+   \[ E = 3.0 \times (10)^{1.12} \approx 34.9 \text{ mesi/uomo} \]
+
+2. **Tempo di sviluppo**:
+   \[ T = 2.5 \times (34.9)^{0.35} \approx 14.6 \text{ mesi} \]
+
+3. **Produttività**:
+   \[ P = \frac{10 \times 1000}{34.9} \approx 286 \text{ LOC/person-month} \]
+
+---
+
+### **6. Limitazioni di COCOMO**
+- Richiede una stima accurata della dimensione in KLOC.
+- Non considera direttamente la complessità del dominio o la tecnologia.
+- Assume che i parametri siano costanti, ma in realtà possono variare.
+
+---
+
+### **7. Versioni Avanzate**
+- **COCOMO II**: Modello più avanzato che considera fattori aggiuntivi come:
+  - Rischi.
+  - Riutilizzo del codice.
+  - Caratteristiche del team e dell'organizzazione.
+
+---
+
+### **Conclusione**
+COCOMO è un approccio fondamentale per stimare sforzi e tempi nei progetti software. È un ottimo punto di partenza, ma va adattato alla realtà specifica del progetto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####RIASSUNTO LEZIONE 7b
+La **lezione 7b** si concentra sull'utilizzo pratico di un **modello di stima personalizzato** per calcolare l'effort, il tempo di sviluppo e altri parametri rilevanti nei progetti software. Introduce inoltre l'uso del linguaggio R per analisi dei dati e visualizzazione grafica, rendendo i risultati più comprensibili.
+
+---
+
+### **1. Scopo della lezione**
+L'obiettivo principale è sviluppare un modello di stima fai-da-te (**DIY Estimation Model**) che integri:
+- **Input personalizzati**: Ad esempio, caratteristiche del progetto e del team.
+- **Modelli matematici semplici**: Basati su formule personalizzate o approcci come COCOMO.
+- **Analisi e rappresentazione grafica**: Per comprendere le relazioni tra le variabili.
+
+---
+
+### **2. Costruzione del Modello**
+La lezione spiega come costruire un modello personalizzato per stimare effort, tempo e produttività:
+- **Definire i parametri di input**:
+  - **Dimensione del progetto (KLOC)**.
+  - **Effort stimato (mesi/persona)**.
+  - **Tipo di progetto** (organic, semidetached, embedded).
+- **Calcolare l'Effort e il Tempo di sviluppo** usando le formule:
+  - Effort (\( E = a \times (KLOC)^b \)).
+  - Tempo (\( T = c \times (E)^d \)).
+- **Personalizzare i parametri** (\( a, b, c, d \)) per adattarli alle esigenze specifiche del progetto.
+
+---
+
+### **3. Introduzione all’uso di R**
+R è utilizzato per:
+1. **Calcolo dei valori**: Inserendo formule e parametri personalizzati.
+2. **Visualizzazione dei risultati**:
+   - Grafici per rappresentare effort, tempo di sviluppo, produttività.
+   - Confronti tra progetti di diverse categorie (organic, semidetached, embedded).
+3. **Analisi dei dati**:
+   - Studio delle variazioni di effort e tempo al variare di dimensione e complessità.
+
+---
+
+### **4. Esempi pratici**
+#### 4.1. Creazione di Dataset
+In R, si può creare un dataset simulando vari progetti con diverse dimensioni (KLOC):
+```R
+data <- data.frame(
+  KLOC = seq(1, 20, by = 1),  # Dimensione in KLOC
+  Type = "Semidetached"       # Tipo di progetto
+)
+```
+
+#### 4.2. Calcolo di Effort e Tempo
+Si applicano le formule personalizzate:
+```R
+# Parametri di esempio per Semidetached
+a <- 3.0
+b <- 1.12
+c <- 2.5
+d <- 0.35
+
+# Calcolo Effort e Tempo
+data$Effort <- a * (data$KLOC^b)
+data$Time <- c * (data$Effort^d)
+```
+
+#### 4.3. Visualizzazione Grafica
+Rende i risultati comprensibili:
+- **Effort vs KLOC**:
+```R
+library(ggplot2)
+ggplot(data, aes(x = KLOC, y = Effort)) +
+  geom_line() +
+  labs(title = "Effort vs KLOC", x = "KLOC", y = "Effort (Person-Months)")
+```
+- **Tempo di sviluppo vs Effort**:
+```R
+ggplot(data, aes(x = Effort, y = Time)) +
+  geom_line() +
+  labs(title = "Time vs Effort", x = "Effort (Person-Months)", y = "Time (Months)")
+```
+
+---
+
+### **5. Interpretazione dei Risultati**
+La lezione sottolinea l’importanza di:
+- **Analizzare le relazioni**: Capire come dimensione e complessità influenzano effort e tempo.
+- **Identificare pattern**: Ad esempio, il rapido aumento dell'effort per progetti complessi.
+- **Supportare le decisioni**: Utilizzare i grafici per comunicare risultati e giustificare stime.
+
+---
+
+### **6. Conclusione**
+La lezione 7b insegna a combinare **stima matematica** e **visualizzazione grafica** per creare report completi e ben comunicativi. Questo approccio migliora la comprensione dei dati e permette di adattare le stime alle caratteristiche specifiche del progetto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### struttura task
+Ecco come suddividere le slide per il tuo report in modo logico e organizzato:
+
+---
+
+### **1. Introduzione e Teoria**
+**Slide 1-2**: **Introduzione al Progetto**
+- Obiettivi della stima: effort, tempo, produttività.
+- Introduzione al modello COCOMO e al suo utilizzo per il progetto.
+
+**Slide 3**: **Teoria del Modello**
+- Breve spiegazione delle formule utilizzate:
+  - Effort: \( E = a \times (KLOC)^b \)
+  - Tempo di sviluppo: \( T = c \times (E)^d \)
+  - Produttività: \( P = \frac{\text{LOC Totali}}{\text{Effort}} \)
+- Parametri (\( a, b, c, d \)) e tipologie di progetto (organic, semidetached, embedded).
+
+---
+
+### **2. Calcolo e Stime**
+**Slide 4-5**: **Calcolo dell'Effort**
+- Spiegazione del calcolo per effort con:
+  - Dimensione del progetto (KLOC).
+  - Parametri specifici per il tuo progetto (esempio: semidetached).
+- Tabella o grafico per mostrare la relazione tra KLOC e effort stimato.
+
+**Slide 6**: **Calcolo del Tempo di Sviluppo**
+- Applicazione della formula per stimare il tempo necessario.
+- Collegamento con l'effort calcolato nella slide precedente.
+- Grafico o tabella che evidenzi come l'effort influisce sul tempo.
+
+**Slide 7**: **Calcolo della Produttività**
+- Mostra la produttività stimata:
+  \[
+  P = \frac{\text{LOC Totali}}{\text{Effort}}
+  \]
+- Confronto con valori tipici per progetti simili (se disponibili).
+
+---
+
+### **3. Grafici e Visualizzazioni**
+**Slide 8-10**: **Grafici creati in R**
+- Grafico **Effort vs KLOC**: evidenzia come cresce l’effort all'aumentare della dimensione del progetto.
+- Grafico **Tempo vs Effort**: illustra la relazione tra effort stimato e durata del progetto.
+- Grafico **Produttività vs KLOC/Effort**: mostra come la produttività varia con dimensione o effort.
+
+Ogni grafico dovrebbe avere:
+- Titolo chiaro.
+- Breve spiegazione nel testo della slide.
+
+---
+
+### **4. Risultati e Conclusioni**
+**Slide 11-12**: **Sintesi dei Risultati/Osservazioni**
+- Riassumi i valori chiave calcolati:
+  - Effort totale (in mesi/uomo).
+  - Tempo stimato per il progetto (in mesi).
+  - Produttività prevista (LOC per mese/uomo).
+- Tabelle con i risultati principali.
+- Considerazioni sui dati ottenuti e sulle implicazioni per la gestione del progetto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####CALCOLO KLOC
+Step 2: Determine Size in KLOC
+Use the approximation: 
+1FP≈24 lines of code (LOC).
+79×24 = 1,896 LOC ≈ 2 KLOC.
